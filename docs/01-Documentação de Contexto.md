@@ -34,10 +34,10 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Micro e pequenas óticas, com uma equipe de até 50 colaboradores, que observaram um aumento notável em suas operações nos últimos anos. Conscientes da importância de manter um controle eficiente do estoque de lentes entre suas unidades, reconhecem a necessidade de uma solução tecnológica especializada. Contudo, a equipe interna não possui amplo conhecimento sobre ferramentas de gestão de estoque específicas para o setor ótico.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Diante desse cenário, a direção da empresa busca uma aplicação que simplifique e otimize o controle de estoque, proporcionando uma visão clara e em tempo real dos níveis de inventário em diferentes óticas. Compreendendo a importância de uma gestão eficaz para garantir disponibilidade de produtos e evitar contratempos, a empresa procura uma solução que atenda às suas necessidades específicas e que seja acessível para uma operação de pequeno porte.
+
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
