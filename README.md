@@ -10,7 +10,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Nome completo do aluno 1
+* Diana Dantiago Oliveira dos Santos
 * Nome completo do aluno 2
 * Naiana Mendonça Coelho
 * João Victor Antunes Faria Lima
