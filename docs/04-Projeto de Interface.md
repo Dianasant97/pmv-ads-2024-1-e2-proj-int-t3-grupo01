@@ -1,36 +1,61 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
-
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+Fluxo de Cadastro de Otica
+![Exemplo de Diagrama de Fluxo](img/CadastroUsuario.png)
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
+Fluxo de Cadastro de pedidos
+![Exemplo de Diagrama de Fluxo](img/CadastroPedidos.png)
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
+Fluxo de Consulta de pedidos
+![Exemplo de Diagrama de Fluxo](img/ConsultaPedido.png)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
+Fluxo de Produção de pedidos
+![Exemplo de Diagrama de Fluxo](img/Producao.png)
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+A estrutura padrão presente nas telas é descrita em detalhes a seguir:
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
+#### Tela - HomePage/login
+
+A tela HomePage/login será a tela inicial do usuário ao acessar a página. Nesta tela haverá o logo do projeto. É nesta tela que o usuário fará o login para acessar sua conta, ou então, redefinir sua senha.
+
+<img width="419" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t3-grupo01/assets/114538688/625ded80-0593-42a8-9800-4405f3e30755">
+
+#### Tela - Menu e acompanhamento de pedidos
+
+Nessa tela é possível selecionar as telas de produto, pedidos, relatórios e usuários. Além de poder acompanhar os pedidos em andamento na lateral esquerda.
+
+<img width="419" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t3-grupo01/assets/114538688/b2d05dbf-9fc4-4418-b67a-1de37cea73c7">
+
+#### Telas - Cadastro de produtos, pedidos e usuários
+
+Nessa tela é possível cadastrar e atualizar novos produtos.
+
+<img width="419" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t3-grupo01/assets/114538688/6d567180-a19e-4204-a3a0-35ce8925f046">
+
+
+#### Telas de gestão de produtos, pedidos e usuários
+
+Nessa tela é possível atualizar ou excluir pedidos, produtos ou usuários.
+
+<img width="419" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t3-grupo01/assets/114538688/6bb6b35f-cb5f-410c-b9bb-f81d5b4b84b9">
+
+#### Tela de detalhes de pedidos
+
+Nessa tela é possível pesquisar por pedidos e fazer alterações do status do pedido.
+
+<img width="419" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t3-grupo01/assets/114538688/69e0eba1-57f7-4f96-9007-d3c5884d8e84">
+
+### Tela de relatórios
+
+Nessa tela é possível fazer o download dos relatórios de estoque na visão diária, semanal ou mensal. 
+
+<img width="419" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t3-grupo01/assets/114538688/862e791f-a65f-4ae7-8647-b338bbcb5ac0">
+
+
  
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+

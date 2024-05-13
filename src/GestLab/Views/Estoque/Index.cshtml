@@ -1,0 +1,39 @@
+﻿﻿@{
+    ViewBag.Title = "Estoque";
+}
+
+@model IEnumerable<EstoqueViewModel>
+
+<h2>@ViewBag.Title</h2>
+<div class="row">
+
+    <a href="@Url.Action("Detail", "Estoque")" class="btn btn-primary">
+        Adicionar
+    </a>
+
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Cor</th>
+                    <th>Quantidade Total</th>
+                    <th>Quantidade Disponível</th>
+                    <th>Quantidade Utilizada</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var estoque in Model)
+                {
+                    <tr>
+                        <td>@estoque.Tipo</td>
+                        <td>@estoque.Cor</td>
+                        <td>@estoque.QuantidadeTotal</td>
+                        <td>@estoque.QuantidadeDisponivel</td>
+                        <td>@estoque.QuantidadeUtilizada</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

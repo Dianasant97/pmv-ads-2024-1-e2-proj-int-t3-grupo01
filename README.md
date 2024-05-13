@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# GESTLAB
 
 `CURSO`
 
@@ -6,18 +6,19 @@
 
 `SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
-
+O projeto consiste no desenvolvimento de uma aplicação de Tecnologia da Informação (TI) voltada para a gestão e controle da produção em laboratórios de montagem de óculos. Essa aplicação interativa visa otimizar os processos operacionais, melhorar a eficiência da produção e garantir a qualidade dos produtos finais. Permitirá o gerenciamento integrado de pedidos, controle de estoque, programação de produção, rastreamento de pedidos em tempo real, gestão de qualidade e comunicação entre os diversos departamentos envolvidos.
 ## Integrantes
 
-* Diana Dantiago Oliveira dos Santos
-* Nome completo do aluno 2
+* Diego Rafael Santos Silva
+* Erika Rocha Negreiros
 * Naiana Mendonça Coelho
 * João Victor Antunes Faria Lima
+* João Gabriel dos Santos Rosa
+* Diana Santiago Oliveira dos Santos
 
 ## Orientador
 
-* Nome completo do professor 1
+* José Wilson da Costa
 
 ## Instruções de utilização
 

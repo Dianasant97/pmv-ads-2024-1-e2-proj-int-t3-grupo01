@@ -1,26 +1,42 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+As especificações do projeto se referem aos detalhes técnicos, funcionais e operacionais que devem ser atendidos pela aplicação de TI. Essas especificações servem como um guia para o desenvolvimento da solução, garantindo que ela atenda às necessidades e requisitos do usuário final. 
 
 ## Personas
+As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem.
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+### Antônia Tamires Silva de Carvalho
+Idade: 34 anos
+Cargo/ Função: Gerente do laboratório 
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+Escolaridade: Superior
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Descrição da sua ocupação: A gerente é responsável pela supervisão geral das operações do laboratório de montagem de óculos. Toma decisões estratégicas relacionadas à produção, recursos humanos, finanças e estratégias de negócios.
+Monitora o desempenho operacional e financeiro do laboratório. Define metas e objetivos de produção, qualidade e eficiência. Utiliza o aplicativo para acessar dados e relatórios de desempenho, aprovar os pedidos feitos pela óticas, realizar análises e tomar decisões estratégicas para otimizar os processos de produção.
+
+### Marcela Lima
+Idade: 2 anos
+Cargo/ Função: Assistente administrativo 
+
+Escolaridade: Superior Completo
+
+Descrição da sua ocupação:  A assistente administrativa oferece suporte administrativo e logístico às operações do laboratório. É responsável pelo agendamento de pedidos, gerenciamento de estoque e comunicação com fornecedores. Auxilia na emissão de documentos, como faturas, ordens de compra e relatórios de produção. Utiliza o aplicativo para registrar estoque, verificar o status de entregas, gerenciar inventário e manter registros atualizados.
+
+### Wanderson Rodrigo Pinheiro
+Idade: 19 anos
+Cargo/ Função: Montador
+
+Escolaridade: Superior Incompleto
+
+Descrição da sua ocupação: O montador é responsável pela montagem física dos óculos de acordo com as especificações e padrões estabelecidos. Realiza tarefas como encaixe de lentes nas armações, ajustes de tamanho e montagem de componentes adicionais.
+Garante a qualidade e precisão do produto final, seguindo procedimentos e padrões de controle de qualidade. Utiliza o aplicativo para receber instruções de montagem, registrar o progresso do trabalho e reportar eventuais problemas ou defeitos identificados durante o processos.
+
+### Ótica (cliente)
+Cargo/ Função: cliente que solicita o pedido de montagem dos óculos
+
+Descrição da sua ocupação: A óptica representa o cliente externo que solicita a realização dos óculos ao laboratório de montagem, pode ser um profissional independente que possui uma óptica ou uma loja de varejo de produtos ópticos.
+Ele fornece as especificações do pedido, incluindo informações sobre a prescrição do cliente, tipo de lente, tratamentos desejados e preferências de armação. Espera uma comunicação clara e eficiente com o laboratório para acompanhar o status do pedido, fazer ajustes quando necessário e garantir a entrega dentro do prazo. Utiliza o aplicativo para enviar e acompanhar pedidos, verificar o status de produção, comunicar-se com o laboratório e garantir a satisfação do cliente final.
+
 
 ## Histórias de Usuários
 
@@ -28,76 +44,67 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|Ótica (cliente)     |Cadastrar pedidos              | Sinalizar meu desejo de adquirir o(s) produto(s)m|
+|Ótica (cliente)     | Editar pedidos        | Corrigir dados errados |
+|Ótica (cliente)     | Acompanhar pedidos        | Saber o status de produção do pedido |
+|Antônia Tamires Silva de Carvalho    | Aprovar pedidos    |Verificar se o pedido repassado está de acordo com as diretrizes da empresa e verificar o estoque|
+|Antônia Tamires Silva de Carvalho     |   Cadastrar usuários  | Para garantir que todas as pessoas envolvidas no processo consigam realizar suas tarefas no sistemao |
+|Antônia Tamires Silva de Carvalho     | Excluir usuários              | Para garantir o controle de acessos |
+|Antônia Tamires Silva de Carvalho     | Cancelar Pedido            | Para manter em produção apenas o que tem execução viável|
+|Antônia Tamires Silva de Carvalho     | Acompanhamento dos pedidos  | Para visualizar em que fase se encontra os pedidos em andamento|
+|Antônia Tamires Silva de Carvalho     | Acompanhamento de estoque  |  Para visualizar o controle de matéria prima disponível|
+|Antônia Tamires Silva de Carvalho     | Gerar relatório  |  Realização de análises e produtividade da empresa|
+|Marcela Lima   | Faz o pedido de materia |  Faz o pedido ao fornecedor
+dos produtos utilizados pelos montadores |
+|Marcela Lima    | Cadastrar produtos  | Registrar os produtos ofertados e seus respectivos materiais |
+|Marcela Lima    | Envia nota fiscal | Envia a nota fiscal para o cliente (ótica) |
+|Wanderson Rodrigo Pinheiro     | Sinalizar início da montagem    | Cadastrar serviço e dar início a montagem |
+|Wanderson Rodrigo Pinheiro     | Receber os pedidos enviados pelas óticas (clientes) | Para gerenciar as atividades diárias
+|Wanderson Rodrigo Pinheiro     | Sinalizar conclusão da montagem    | Indicar que a produção terminou e dar baixa no estoque|
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários, bem como os requisitos não funcionais que descrevem os aspectos que o sistema deverá apresentar de maneira geral. Estes requisitos são apresentados a seguir.
 
 ### Requisitos Funcionais
 
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
+
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA | 
-|RF-002| A aplicação deve emitir um relatório de tarefas realizadas no mês   | MÉDIA |
+|RF-001| A aplicação deve ser capaz de realizar o cadastro e atualização de usuários | ALTA | 
+|RF-002| A aplicação deve permitir que o usuário cadastre e atualize pedidos  | ALTA  |
+|RF-003|A aplicação deve permitir que o usuário realize o cadastro e atualização do estoque de materiais | ALTA  |
+|RF-004| A aplicação deve permitir que o usuário exporte relatório a partir de filtros pré-definidos  | ALTA  |
+|RF-005| A aplicação deve permitir que o usuário visualize um pedido em andamento ou finalizado  | ALTA  |
+|RF-006| A aplicação deve permitir armazenamento de notas fiscais  | MÉDIA |
+|RF-007| A aplicação deve permitir que o usuário realize login  | ALTA  |
+
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku); | ALTA | 
+|RNF-002| O site deverá ser responsivo permitindo a visualização em um celular de forma adequada |  ALTA | 
+|RNF-003| O site deve ter bom nível de contraste entre os elementos da tela em conformidade |  MÉDIA | 
+|RNF-004| O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) |  ALTA | 
+|RNF-005| O tempo de resposta das operações não pode ultrapassar 3 segundos |  ALTA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|ID   | Restrição                                             |
+|-----|-------------------------------------------------------|
+|RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 23/06/2024. |
+|RE-02| O projeto deve ser planejado e executado dentro dos recursos financeiros disponíveis, incluindo custos relacionados a hardware, software, ferramentas de desenvolvimento e quaisquer outros gastos associados ao projeto. |
+|RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho. |
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
+![Diagrama de Casos de Uso](img/DiagramaCasoUso.png)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
-
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+Figura 1 - Diagrama de casos de uso
