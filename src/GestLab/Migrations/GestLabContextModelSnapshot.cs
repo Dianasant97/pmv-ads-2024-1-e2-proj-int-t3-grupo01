@@ -46,6 +46,9 @@ namespace GestLab.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("IdUsuarioId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Logradouro")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -63,6 +66,8 @@ namespace GestLab.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdUsuarioId");
 
                     b.ToTable("Cliente");
                 });
@@ -226,6 +231,17 @@ namespace GestLab.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("GestLab.Models.ClienteModel", b =>
+                {
+                    b.HasOne("GestLab.Models.UsuarioModel", "IdUsuario")
+                        .WithMany()
+                        .HasForeignKey("IdUsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IdUsuario");
                 });
 
             modelBuilder.Entity("GestLab.Models.PedidoModel", b =>

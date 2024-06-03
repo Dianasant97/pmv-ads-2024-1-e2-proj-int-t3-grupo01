@@ -1,4 +1,5 @@
-﻿@model UsuarioModel;
+﻿@model UsuarioModel
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -7,6 +8,5 @@
 
 <div class="text-center">
     <h1 class="display-4">Bem vindo</h1>
-    <p>@Model.Nome</p>
+    <p>@HttpContextAccessor.HttpContext.Session?.GetString("_Nome")</p>
 </div>
-

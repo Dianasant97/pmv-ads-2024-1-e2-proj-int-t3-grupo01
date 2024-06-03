@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,19 +38,36 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">GestLab</div>
             </a>
+            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Nome").ToString() == "GER")
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Usuario")">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+            }
 
-            <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "Usuario")">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Usuarios</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "Estoque")">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Estoque</span>
-                </a>
-            </li>
+            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Nome").ToString() == "GER")
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Clientes")">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>Clientes</span>
+                    </a>
+                </li>
+            }
+
+            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Nome").ToString() == "AST")
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Estoque")">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>Estoque</span>
+                    </a>
+                </li>
+            }
+
             <li class="nav-item">
                 <a class="nav-link" href="@Url.Action("Index", "Pedido")">
                     <i class="fas fa-fw fa-cog"></i>

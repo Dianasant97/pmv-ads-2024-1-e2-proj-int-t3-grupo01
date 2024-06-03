@@ -20,6 +20,13 @@ namespace GestLab.Controllers
             if (string.IsNullOrEmpty(usuario.Nome))
                 return RedirectToAction("Index", "Login");
 
+            var d = HttpContext.Session.GetString(SessionKeyNome) ?? "";
+            if(d == null || d == "")
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
+
             return View(usuario);
         }
 

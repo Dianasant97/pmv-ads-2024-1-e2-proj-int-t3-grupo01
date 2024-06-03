@@ -6,16 +6,23 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<GestLabContext>();
 
-builder.Services.AddDistributedMemoryCache();
+//builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.IdleTimeout = TimeSpan.FromSeconds(15);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
+    //options.Cookie.Name = ".islam.cookie";  
 });
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+//Cookies
+//app.Services.AddAuthentication()
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
