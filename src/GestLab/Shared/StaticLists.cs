@@ -36,7 +36,19 @@
             return new List<string>() {
                 "Administrador",
                 "Cliente",
+                "Assistente",
                 "Montador"
+            };
+        }
+
+        public static IEnumerable<string> ObterStatusPedido()
+        {
+            return new List<string>() {
+                "Pedido Feito",
+                "Pedido Aprovado",
+                "Nota Pedido Enviada",
+                "Montagem Iniciada",
+                "Pedido Concluído"
             };
         }
     }
