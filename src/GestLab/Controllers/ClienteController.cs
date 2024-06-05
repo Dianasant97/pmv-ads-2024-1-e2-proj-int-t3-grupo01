@@ -5,12 +5,12 @@ using System.Diagnostics;
 
 namespace GestLab.Controllers
 {
-    public class ClientesController : ControllerBase
+    public class ClienteController : ControllerBase
     {
-        private readonly ILogger<ClientesController> _logger;
+        private readonly ILogger<ClienteController> _logger;
         private readonly GestLabContext _context;
 
-        public ClientesController(ILogger<ClientesController> logger, GestLabContext context)
+        public ClienteController(ILogger<ClienteController> logger, GestLabContext context)
         {
             _logger = logger;
             _context = context;
@@ -18,15 +18,30 @@ namespace GestLab.Controllers
 
         public IActionResult Index()
         {
-            var usuario = _context.Usuarios.ToList();
-            return View("Index",usuario);
+            var clientes = _context.Cliente.ToList();
+            return View("Index", clientes);
         }
 
         [HttpPost]
         public IActionResult Detail(ClienteModel cliente)
         {
-            if(cliente.Id ==0)
+            if (cliente.Id == 0) 
+            {
+                var usuario = new UsuarioModel
+                {
+                    Nome = cliente.Nome,
+                    Email = cliente.Email,
+                    Senha = cliente.Cnpj,
+                    Tipo = "Cliente",
+                    Telefone = cliente.Telefone,
+                };
+
+                _context.Usuarios.Add(usuario);
+                _context.SaveChanges();
+
+                cliente.IdUsuario = usuario.Id;
                 _context.Cliente.Add(cliente);
+            }
             else
                 _context.Cliente.Update(cliente);
             

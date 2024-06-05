@@ -25,6 +25,14 @@
 
 <body id="page-top">
 
+    @if (HttpContextAccessor.HttpContext.Session == null)
+    {
+        <a href="@Url.Action("Index", "Login")" id="BtnLogOut"></a>
+        <script>
+
+        </script>
+    }
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -38,7 +46,7 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">GestLab</div>
             </a>
-            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Nome").ToString() == "GER")
+            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Tipo").ToString() == "Administrador")
             {
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("Index", "Usuario")">
@@ -48,17 +56,17 @@
                 </li>
             }
 
-            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Nome").ToString() == "GER")
+            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Tipo").ToString() == "Administrador")
             {
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Index", "Clientes")">
+                    <a class="nav-link" href="@Url.Action("Index", "Cliente")">
                         <i class="fas fa-fw fa-cog"></i>
                         <span>Clientes</span>
                     </a>
                 </li>
             }
 
-            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Nome").ToString() == "AST")
+            @if (HttpContextAccessor.HttpContext.Session?.GetString("_Tipo").ToString() == "Assistente")
             {
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("Index", "Estoque")">

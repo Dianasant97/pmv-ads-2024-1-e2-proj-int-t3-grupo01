@@ -46,7 +46,7 @@ namespace GestLab.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("IdUsuarioId")
+                    b.Property<int>("IdUsuario")
                         .HasColumnType("int");
 
                     b.Property<string>("Logradouro")
@@ -67,7 +67,7 @@ namespace GestLab.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdUsuarioId");
+                    b.HasIndex("IdUsuario");
 
                     b.ToTable("Cliente");
                 });
@@ -237,7 +237,7 @@ namespace GestLab.Migrations
                 {
                     b.HasOne("GestLab.Models.UsuarioModel", "IdUsuario")
                         .WithMany()
-                        .HasForeignKey("IdUsuarioId")
+                        .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

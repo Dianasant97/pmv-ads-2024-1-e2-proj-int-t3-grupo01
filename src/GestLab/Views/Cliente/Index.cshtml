@@ -17,6 +17,7 @@
                 <tr>
                     <th>Nome</th>
                     <th>CNPJ</th>
+                    <th>Email</th>
                     <th>Telefone</th>
                     <th>Editar</th>
                 </tr>
@@ -27,6 +28,7 @@
                     <tr>
                         <td>@cliente.Nome</td>
                         <td>@cliente.Cnpj</td>
+                        <td>@cliente.Email</td>
                         <td>@cliente.Telefone</td>
                         <td>@Html.ActionLink("Editar", "Detail", new { id = cliente.Id })</td>
                     </tr>
