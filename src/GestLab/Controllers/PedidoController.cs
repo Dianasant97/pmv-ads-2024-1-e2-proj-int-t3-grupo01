@@ -9,7 +9,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GestLab.Controllers
 {
-    public class PedidoController : Controller
+    public class PedidoController : ControllerBase
     {
         private readonly ILogger<PedidoController> _logger;
         private readonly GestLabContext _context;
@@ -22,9 +22,26 @@ namespace GestLab.Controllers
 
         public IActionResult Index()
         {
-            var pedido = _context.Pedido
-                .Include(x => x.Cliente)
-                .ToList();
+            var usuarioLogado = base.GetDadosUsuario();
+            var pedido = _context.Pedido.Include(x => x.Cliente).AsQueryable();
+
+            switch (usuarioLogado.Tipo)
+            {
+                case "Cliente":
+                    pedido = pedido.Where(l => l.Cliente.IdUsuario == usuarioLogado.Id);
+                    break;
+                case "Montador":
+                    pedido = pedido.Where(l => l.MontadorResponsavel.Id == usuarioLogado.Id);
+                    break;
+                case "Assistente":
+                    //pedido = pedido.Where(l => l.i .Id == usuarioLogado.Id);
+                    break;
+                default:
+                    //administrador
+                    break;
+            }
+
+            pedido.ToList();
             return View("Index", pedido);
         }
 
@@ -51,7 +68,7 @@ namespace GestLab.Controllers
                 var armacao = new ProdutoModel();
                 armacao.DataSaida = armacao.DataEntrada = DateTime.Now;
                 armacao.Descricao = pedido.IdentificacaoArmacao;
-                armacao.Tipo = "Armação";
+                armacao.Tipo = "Armaï¿½ï¿½o";
                 armacao.Cor = "-";
                 armacao.Utilizado = true;
                 pedido.Armacao = armacao;
@@ -71,9 +88,9 @@ namespace GestLab.Controllers
             }
 
             if (!possuiArmacao && !pedido.PossuiLentesEmEstoque)
-                pedido.Status = "Pendente Lentes e Armação";
+                pedido.Status = "Pendente Lentes e Armaï¿½ï¿½o";
             else if (!possuiArmacao)
-                pedido.Status = "Pendente Armação";
+                pedido.Status = "Pendente Armaï¿½ï¿½o";
             else if (!pedido.PossuiLentesEmEstoque)
                 pedido.Status = "Pendente Lentes";
             else
@@ -133,26 +150,26 @@ namespace GestLab.Controllers
         }
         public async Task<IActionResult> Relatorio(int? id, int? mes, int? ano)
         {
-            if (id == null) 
+            if (id == null)
                 return NotFound();
 
             var pedido = await _context.Pedido.FindAsync(id);
 
-            if (pedido == null) 
+            if (pedido == null)
                 return NotFound();
 
-            var Pedido= await _context.Pedido
+            var Pedido = await _context.Pedido
                 .Include(x => x.Receita)
                 .OrderByDescending(c => c.DataPedido)
                 .ToListAsync();
 
-           
+
             var mesAno = $"{mes}/{ano}";
 
             // Passar os dados para a view
             ViewBag.Pedido = pedido;
             ViewBag.MesAno = mesAno;
-           
+
 
             return View(pedido);
 
