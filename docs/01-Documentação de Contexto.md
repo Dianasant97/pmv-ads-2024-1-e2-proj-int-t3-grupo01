@@ -34,9 +34,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Micro e pequenas óticas, com uma equipe de até 50 colaboradores, que observaram um aumento notável em suas operações nos últimos anos. Conscientes da importância de manter um controle eficiente do estoque de lentes entre suas unidades, reconhecem a necessidade de uma solução tecnológica especializada. Contudo, a equipe interna não possui amplo conhecimento sobre ferramentas de gestão de estoque específicas para o setor ótico.
-
-Diante desse cenário, a direção da empresa busca uma aplicação que simplifique e otimize o controle de estoque, proporcionando uma visão clara e em tempo real dos níveis de inventário em diferentes óticas. Compreendendo a importância de uma gestão eficaz para garantir disponibilidade de produtos e evitar contratempos, a empresa procura uma solução que atenda às suas necessidades específicas e que seja acessível para uma operação de pequeno porte.
+Micro e pequenas óticas, com equipes de até 50 colaboradores, buscam uma solução especializada para otimizar o controle de estoque de lentes entre suas unidades. O público-alvo direciona-se a laboratórios que rotineiramente enfrentam desafios como ineficiências na gestão de estoque, baixa rastreabilidade e dificuldades na análise de desempenho. Esses laboratórios estão interessados em aprimorar esses processos por meio de uma aplicação user-friendly, com boa usabilidade e acessibilidade.
 
 
 > **Links Úteis**:
